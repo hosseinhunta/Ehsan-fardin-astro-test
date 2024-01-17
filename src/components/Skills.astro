@@ -1,45 +1,67 @@
 ---
 import SkillItem from "./SkillItem";
-const skillData = [
+const langData = [
   {
     id: 1,
-    title: "زیاد سخن گفتن",
-    percentage: "95%",
+    title: "انگلیسی",
+    percentage: "5%",
   },
   {
     id: 2,
-    title: "تونایی کنترل زبان",
+    title: "'کردی'",
+    percentage: "95%",
+  },
+  {
+    id: 3,
+    title: "ترکی",
+    percentage: "35%",
+  },
+  {
+    id: 3,
+    title: "فارسی",
+    percentage: "75%",
+  },
+];
+const skillData = [
+  {
+    id: 1,
+    title: "Java Script",
+    percentage: "5%",
+  },
+  {
+    id: 2,
+    title: "C#",
     percentage: "10%",
   },
   {
     id: 3,
-    title: "فوتبال",
-    percentage: "35%",
+    title: "React",
+    percentage: "5%",
   },
   {
     id: 5,
-    title: "شنا",
-    percentage: "50%",
+    title: "HTML",
+    percentage: "5%",
   },
   {
     id: 4,
-    title: "حمایت از حیوانات",
-    percentage: "49%",
+    title: "CSS",
+    percentage: "2%",
   },
   {
     id: 6,
-    title: "حمایت از انسان ها",
+    title: "کار تیمی",
     percentage: "69%",
   },
   {
     id: 7,
     title: "شناخت از رشته",
-    percentage: "0%",
+    percentage: "20%",
   },
   {
     id: 8,
     title: "شناخت از کامپیوتر",
-    percentage: "12%",
+    percentage: "40%",
   },
 ];
 ---
@@ -48,9 +70,15 @@ const skillData = [
   <div class="flex flex-wrap">
     <div class="w-full">
       <div class="md:mx-4">
-        <h3 class="text-2xl text-gray-800 font-bold mb-4">مهارت های این شخص</h3>
+        <h3 class="text-2xl text-gray-800 font-bold mb-4">مهارت‌ها</h3>
       </div>
     </div>
     {skillData.map((skill, id) => <SkillItem skill={skill} key={id} />)}
   </div>
+  <div class="w-full">
+    <div class="md:mx-4">
+      <h3 class="text-2xl text-gray-800 font-bold mb-4">زبان ها</h3>
+    </div>
+  </div>
+  {langData.map((skill, id) => <SkillItem skill={skill} key={id} />)}
 </div>
