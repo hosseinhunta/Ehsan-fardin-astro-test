@@ -1,0 +1,31 @@
+---
+title: "استفاده از MDX"
+description: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ"
+pubDate: "Jul 02 2022"
+heroImage: "/blog-placeholder-5.jpg"
+---
+
+این طرح زمینه همراه با ادغام [@astrojs/mdx](https://docs.astro.build/en/guides/integrations-guide/mdx/) است که در فایل پیکربندی «astro.config.mjs» شما نصب و پیکربندی شده است. اگر ترجیح می دهید از MDX استفاده نکنید، می توانید با حذف ادغام از فایل پیکربندی خود، پشتیبانی را غیرفعال کنید.
+
+## چرا MDX؟
+
+MDX یک طعم خاص از Markdown است که از جاوا اسکریپت جاسازی شده و نحو JSX پشتیبانی می کند. این قابلیت [ترکیب اجزای جاوا اسکریپت و رابط کاربری را در محتوای Markdown خود] (https://docs.astro.build/en/guides/markdown-content/#mdx-features) برای چیزهایی مانند نمودارهای تعاملی یا هشدارها باز می‌کند.
+
+اگر محتوایی دارید که در MDX نوشته شده است، امیدواریم این ادغام مهاجرت به Astro را آسان کند.
+
+## مثال
+
+در اینجا نحوه وارد کردن و استفاده از یک مؤلفه UI در داخل MDX آمده است.
+وقتی این صفحه را در مرورگر باز می کنید، باید دکمه قابل کلیک زیر را ببینید.
+
+import HeaderLink from "../../components/HeaderLink.astro";
+
+<HeaderLink href="#" onclick="alert('clicked!')">
+  چیز خواست نیست فقط من خواستم این mdx تست کنم.
+</HeaderLink>
+
+## پیوندهای بیشتر
+
+- [مستند نحوی MDX] (https://mdxjs.com/docs/what-is-mdx)
+- [اسناد استفاده از Astro](https://docs.astro.build/en/guides/markdown-content/#markdown-and-mdx-pages)
+- **توجه:** [دستورالعمل های مشتری](https://docs.astro.build/en/reference/directives-reference/#client-directives) همچنان برای ایجاد اجزای تعاملی مورد نیاز است. در غیر این صورت، تمام اجزای موجود در MDX شما به صورت پیش فرض به صورت HTML ایستا (بدون جاوا اسکریپت) ارائه می شوند.

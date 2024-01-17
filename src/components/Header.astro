@@ -1,0 +1,81 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../consts";
+import { FaTelegram, FaInstagram } from "react-icons/fa";
+---
+
+<header>
+  <nav class="">
+    <h2><a href="/">{SITE_TITLE}</a></h2>
+    <nav class="internal-links">
+      <ul class="flex flex-wrap">
+        <li class="hover:text-blue-400">
+          <HeaderLink href="/">خانه</HeaderLink>
+        </li>
+        <li class="hover:text-blue-400">
+          <HeaderLink href="/blog">وبلاگ</HeaderLink>
+        </li>
+      </ul>
+    </nav>
+    <div class="social-links">
+      <a href="https://t.me/ehsan_9377" target="_blank">
+        <span class="sr-only">تلگرام احسان فردین</span>
+        <FaTelegram
+          width={32}
+          height={32}
+          className="w-8 h-8 hover:text-blue-600"
+        />
+      </a>
+
+      <a href="https://www.instagram.com/ehsan_9377" target="_blank">
+        <span class="sr-only">انیستاگرام احسان فردین</span>
+        <FaInstagram
+          width={32}
+          height={32}
+          className="w-8 h-8 hover:text-purple-500"
+        />
+      </a>
+    </div>
+  </nav>
+</header>
+<style>
+  header {
+    margin: 0;
+    padding: 0 1em;
+    background: white;
+    box-shadow: 0 2px 8px rgba(var(--black), 5%);
+  }
+  h2 {
+    margin: 0;
+    font-size: 1em;
+  }
+
+  h2 a,
+  h2 a.active {
+    text-decoration: none;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav a {
+    padding: 1em 0.5em;
+    color: var(--black);
+    border-bottom: 4px solid transparent;
+    text-decoration: none;
+  }
+  nav a.active {
+    text-decoration: none;
+    border-bottom-color: var(--accent);
+  }
+  .social-links,
+  .social-links a {
+    display: flex;
+  }
+  @media (max-width: 720px) {
+    .social-links {
+      display: none;
+    }
+  }
+</style>

@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+import { FaTelegram, FaInstagram } from "react-icons/fa";
+import profile from "../../public/profile.jpg";
+---
+
+<aside
+  class="sticky top-0 bg-white md:mx-8 lg:mx-4 mb-8 p-6 shadow-md rounded-md -mt-40"
+>
+  <div class="w-24 h-24 rounded-md overflow-hidden mx-auto mb-5">
+    <Image src={profile} alt="shafiqhammad" class="w-full" />
+  </div>
+  <div class="text-center">
+    <h1 class="text-xl text-gray-800 font-bold mb-1">احسان فردین</h1>
+    <p class="text-sm text-gray-400 mb-3">
+      دانشجو دانشگاه مهندسی کامپیوتر از<br />
+      <a href="https://quchan.iau.ir/fa" class="text-purple-600 pl-1">
+        دانشگاه آزاد اسلامی واحد قوچان</a
+      >
+    </p>
+
+    <ul class="flex flex-wrap justify-center">
+      <li class="m-2">
+        <a
+          href="https://t.me/ehsan_9377"
+          class="w-8 h-8 bg-purple-100 rounded text-purple-800 flex items-center justify-center hover:text-white hover:bg-purple-600"
+        >
+          <FaTelegram />
+        </a>
+      </li>
+      <li class="m-2">
+        <a
+          href="https://www.instagram.com/ehsan_9377"
+          class="w-8 h-8 bg-purple-100 rounded text-purple-800 flex items-center justify-center hover:text-white hover:bg-purple-600"
+        >
+          <FaInstagram />
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="text-start pt-4">
+    <h3 class="text-md mb-2 uppercase font-medium text-gray-800">
+      درباره من :
+    </h3>
+    <p class="text-gray-400 text font-light leading-relaxed">
+      هرچی گفتم 4 خط درباره خودت توضیح بده اینجا بزارم هیچی نمیدونست بگه :|
+    </p>
+  </div>
+</aside>
